@@ -1,0 +1,22 @@
+{
+  "name": "maaz_cli_atm_machine",
+  "version": "1.1.0",
+  "description": "This is a Typescript ATM Machine",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "maaz_cli_atm_machine": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.18"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}

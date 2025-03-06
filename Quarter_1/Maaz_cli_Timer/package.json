@@ -1,0 +1,19 @@
+{
+  "name": "maaz_cli_timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "date-fns": "^3.6.0",
+    "inquire": "^0.4.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
