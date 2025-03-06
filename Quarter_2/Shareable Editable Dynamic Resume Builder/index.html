@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Dynamic Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form id="input-form">
+        <header>
+            <h1>Editable Dynamic Resume</h1>
+        </header>
+        <main>
+            <!-- Image Upload Section -->
+            <section class="S-I">
+                <div class="image-select">
+                    <label for="img-upload" class="custom-img-upload">Select Image</label>
+                    <input type="file" id="img-upload" accept="image/*">
+                    <img src="" id="profile-img" alt="Profile Image">
+                </div>
+            </section>
+
+            <!-- Personal Information Section -->
+            <section class="S-II">
+                <h2>Personal Information</h2>
+                <div>
+                    <label for="for-name">
+                        <i class="fa-solid fa-signature icon"></i>
+                        Name
+                    </label>
+                    <input type="text" name="name" id="for-name" placeholder="Name" required>
+                </div>
+                <div>
+                    <label for="for-email">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        Email
+                    </label>
+                    <input type="email" name="email" id="for-email" placeholder="Example@abc.com" required>
+                </div>
+                <div>
+                    <label for="for-phone">
+                        <i class="fa-solid fa-phone icon"></i>
+                        Phone
+                    </label>
+                    <input type="tel" name="phone" id="for-phone" placeholder="+92#########" required>
+                </div>
+                <div>
+                    <span>Gender:</span>
+                    <label for="G-male">
+                        <i class="fa-solid fa-person icon"></i> Male
+                    </label>
+                    <input type="radio" name="gender" id="G-male" value="male">
+                    <label for="G-female">
+                        <i class="fa-solid fa-person-dress icon"></i> Female
+                    </label>
+                    <input type="radio" name="gender" id="G-female" value="female">
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="S-III">
+                <h2>Education</h2>
+                <label for="for-education">Add your educational details:</label>
+                <textarea name="education" id="for-education" rows="4" placeholder="Education details"></textarea>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="S-IV">
+                <h2>Experience</h2>
+                <label for="for-experience">Add your work experience:</label>
+                <textarea name="experience" id="for-experience" rows="4" placeholder="Work experience"></textarea>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="S-V">
+                <h2>Skills</h2>
+                <label for="for-skills">Add your skills:</label>
+                <textarea name="skills" id="for-skills" rows="4" placeholder="Skills"></textarea>
+            </section>
+
+            <!-- Description Section -->
+            <section class="S-VI">
+                <h2>Description</h2>
+                <label for="for-description">Add a brief description:</label>
+                <textarea name="description" id="for-description" rows="4" placeholder="Add a description"></textarea>
+            </section>
+        </main>
+
+        <!-- Buttons -->
+        <div class="form-buttons">
+            <button type="button" id="generate-resume">Generate Resume</button>
+            <button type="button" id="print-resume" style="display: none;">Print PDF</button>
+            <button type="button" id="edit-resume" style="display: none;">Edit Resume</button>
+        </div>
+
+        <!-- Resume Output Display -->
+        <div id="resume-output"></div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Resume Builder</title>
+</head>
+
+<body>
+    <form id="input-form">
+        <header>
+            <h1>Editable Dynamic Resume </h1>
+        </header>
+        <main>
+            <!-- Image Upload Section -->
+            <section class="S-I">
+                <div class="image-select">
+                    <input type="file" id="img-upload" accept="image/*">
+                    <label for="img-upload" class="custom-img-upload">Select Image</label>
+                    <img src="/image.png" id="profile-img" alt="Profile Image">
+                </div>
+            </section>
+
+            <!-- Personal Information Section -->
+            <section class="S-II">
+                <h2>Personal Information</h2>
+                <div>
+                    <i class="fa-solid fa-signature icon"></i>
+                    <input type="text" name="name" id="for-name" placeholder="Name" required>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <input type="email" name="email" id="for-email" placeholder="Example@abc.com" required>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone icon"></i>
+                    <input type="tel" name="phone" id="for-phone" placeholder="+92#########" required>
+                </div>
+                <div>
+                    <i class="fa-solid fa-person icon"></i>
+                    <input type="radio" name="gender" id="G-male" value="male">
+                    <label for="G-male">Male</label>
+                    <br>
+                    <i class="fa-solid fa-person-dress icon"></i>
+                    <input type="radio" name="gender" id="G-female" value="female">
+                    <label for="G-female">Female</label>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="S-III">
+                <h2>Education</h2>
+                <div id="education-section"></div>
+                <button type="button" id="add-edu"><i class="fa-solid fa-plus"></i></button>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="S-IV">
+                <h2>Experience</h2>
+                <div id="experience-section"></div>
+                <button type="button" id="add-exp"><i class="fa-solid fa-plus"></i></button>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="S-V">
+                <h2>Skills</h2>
+                <div id="skills-section"></div>
+                <button type="button" id="add-skill"><i class="fa-solid fa-plus"></i></button>
+            </section>
+
+            <!-- Description Section -->
+            <section class="VI">
+                <h2>Description</h2>
+                <textarea name="description" id="for-description" placeholder="Add Description"></textarea>
+            </section>
+        </main>
+
+        <!-- Generate Resume Button -->
+        <button type="button" id="generate-resume">Generate Resume</button>
+
+        <!-- Resume Output Display -->
+        <div id="resume-output"></div>
+        <button id="edit-resume" style="display: none;">Edit Resume</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
